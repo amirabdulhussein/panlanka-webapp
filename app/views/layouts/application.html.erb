@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PanlankaWebapp</title>
+  <title>Panlanka Webapp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+  
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <h1>Panlanka Travels</h1>
+    </div>  
+    
+    <div class="navbar-header pull-right">
+       <button type="button" class="btn btn-default navbar-btn navbar-right">
+         <%= link_to "Sign In", root_path %>
+       </button>
+     </div>
+   
+  </div>
+</nav>
+
+
+
+<div id = 'home_body', class= "container-fluid">
+    
+  <%= yield %>
+  
+</div>
 
 </body>
 </html>
